@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球探比分 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafb;
+            font-family: system-ui, -apple-system, 'Helvetica Neue', 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            letter-spacing: 0.02em;
+        }
+
+        .wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        /* 横幅 hero */
+        .hero {
+            background: #ffffff;
+            border-bottom: 1px solid #e9edf2;
+            padding: 3.2rem 1.5rem 2.8rem;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #475569;
+            max-width: 560px;
+            margin: 0.6rem auto 0;
+            line-height: 1.6;
+        }
+
+        .hero .note-badge {
+            display: inline-block;
+            margin-top: 1.2rem;
+            background: #eef2f6;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #334155;
+        }
+
+        /* 正文区域 窄宽 */
+        .content {
+            margin-top: 2.8rem;
+        }
+
+        .section {
+            margin-bottom: 2.8rem;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.35rem;
+            font-weight: 550;
+            color: #0f172a;
+            margin-bottom: 0.9rem;
+            border-left: 4px solid #2563eb;
+            padding-left: 0.9rem;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 0.9rem;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .insight-list {
+            list-style: none;
+            margin: 1rem 0 0.4rem;
+        }
+
+        .insight-list li {
+            padding: 0.4rem 0 0.4rem 1.6rem;
+            position: relative;
+            font-size: 0.98rem;
+            color: #1e293b;
+        }
+
+        .insight-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0.2rem;
+            color: #94a3b8;
+        }
+
+        .highlight-link {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0 1.2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .highlight-link p {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 0.2rem;
+        }
+
+        .highlight-link a {
+            color: #1e40af;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #bfd4ff;
+            transition: border-color 0.2s, color 0.15s;
+        }
+
+        .highlight-link a:hover {
+            border-bottom-color: #1e40af;
+            color: #0f2b6b;
+        }
+
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin-top: 1.8rem;
+            border: 1px solid #ecf1f7;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.05rem;
+            font-weight: 540;
+            color: #0f172a;
+            margin-bottom: 0.9rem;
+        }
+
+        .faq-mini .qa-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #e5e9f0;
+            padding-bottom: 0.9rem;
+        }
+
+        .faq-mini .qa-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .faq-mini .q {
+            font-weight: 500;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-mini .a {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .footer-note a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b9d0f5;
+        }
+
+        .footer-note a:hover {
+            text-decoration-color: #2563eb;
+        }
+
+        @media (max-width: 540px) {
+            .wrapper {
+                padding: 1.8rem 1.2rem 3rem;
+            }
+
+            .hero {
+                padding: 2.2rem 1.2rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+                padding-left: 0.7rem;
+            }
+
+            .highlight-link {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .faq-mini {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-inner">
+        <h1>球探比分 · 简明指南</h1>
+        <p>不只是数据，更是一种看比赛的日常节奏。从零开始，用最舒服的方式跟上赛场变化。</p>
+        <span class="note-badge">📋 生活向 · 实用提醒</span>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="content">
+
+        <!-- 第一段：背景说明 -->
+        <div class="section">
+            <h2>为什么你需要一个顺手的地方看比分</h2>
+            <p>从晨跑到晚间新闻，很多人习惯一边做自己的事，一边悄悄刷新赛况。比分不是全部，但它常常是对话的开始——同事间、朋友群、甚至家庭聚餐时，一句“刚才那场什么情况”就能把大家拉回同一频道。而一个清晰、响应够快的比分页面，恰恰让这些瞬间变得自然。</p>
+            <p>无论你是资深球迷，还是偶尔扫一眼的旁观者，太多混杂的弹窗和无关信息往往让人分心。这时候，一个专注、克制的页面就显得格外珍贵。</p>
+        </div>
+
+        <!-- 第二段：特点与场景 -->
+        <div class="section">
+            <h2>日常场景里，它怎么帮到你</h2>
+            <p>工作日午休，打开手机快速扫一眼半场比分；周末下午，一边烤面包一边留意最后十分钟的进球。不需要注册、不需要订阅推送，页面上该有的时刻和数字就在那里。</p>
+            <ul class="insight-list">
+                <li>实时更新，省去反复刷新的等待感</li>
+                <li>结构直观，重要信息一眼可读</li>
+                <li>轻量界面，不消耗过多注意力</li>
+            </ul>
+            <p style="margin-top: 0.8rem;">这些细节或许不会改变一场比赛的结局，但它们能让你看球的过程更从容——就像一本常翻常新的小册子，每次打开都刚刚好。</p>
+        </div>
+
+        <!-- 第三段：访问提醒+链接 -->
+        <div class="section">
+            <h2>一点小提醒 · 关于访问</h2>
+            <p>如果你打算把某个比分页面设为常驻标签页，记得留意网络环境是否顺畅。有些公共网络或办公网络可能会对实时数据流有限制，偶尔页面加载稍慢，不妨稍等几秒再刷新。</p>
+            <p>另外，不管是手机还是电脑，保持浏览器版本更新也能让页面渲染更稳定。说到底，好工具也需要一点点配合。</p>
+
+            <!-- 嵌入式链接卡片 -->
+            <div class="highlight-link">
+                <p>想直接体验？这里有一份常被提到的参考入口：</p>
+                <p style="margin-top: 0.2rem;">→ <a href="https://zh-cns-qiutansports.com">球探比分</a> · 日常更新页面</p>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #475569;">初次使用建议先浏览一两分钟，熟悉版面布局。后续再打开时，基本就能秒定位到自己关注的部分。</p>
+        </div>
+
+        <!-- FAQ 摘要（简化但实用） -->
+        <div class="faq-mini">
+            <h3>❓ 一些你可能想问的</h3>
+            <div class="qa-item">
+                <div class="q">页面卡顿或数据不刷新怎么办？</div>
+                <div class="a">先检查网络连接，再尝试手动刷新一次。多数情况下，短暂的延迟与本地网络波动有关。</div>
+            </div>
+            <div class="qa-item">
+                <div class="q">是否需要在页面上注册或登录？</div>
+                <div class="a">不需要。直接打开即可浏览，没有额外的注册步骤。你想看就去看了。</div>
+            </div>
+            <div class="qa-item">
+                <div class="q">手机和电脑的显示效果差别大吗？</div>
+                <div class="a">页面针对不同屏幕做了适配，手机竖屏浏览、电脑宽屏观看都有相应的排版，信息层级保持一致。</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <p>慢慢来，比分一直在那儿。<br>如果想从首页开始，可以随时回到 <a href="https://zh-cns-qiutansports.com">球探比分</a>。</p>
+        <p style="margin-top: 0.6rem; font-size: 0.8rem; color: #94a3b8;">— 杂志式专题 · 第 22 期 —</p>
+    </div>
+</div>
+
+</body>
+</html>
